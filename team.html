@@ -96,14 +96,24 @@
     </script>
 
     <script>
-        // 初始化地图
-        var map = L.map('map').setView([35, -30], 2);
+        // 初始化地图，调整中心点和缩放级别
+        var map = L.map('map', {
+            center: [30, 0],  // 调整中心点到更合适的位置
+            zoom: 2,         // 初始缩放级别
+            minZoom: 2,      // 最小缩放级别，防止看到重复的地图
+            maxBounds: [     // 限制地图的可视范围
+                [-90, -180], // 西南角
+                [90, 180]    // 东北角
+            ],
+            maxBoundsViscosity: 1.0  // 使边界限制更严格
+        }).setView([30, 0], 2);
 
-        // 使用 CartoDB 的 Voyager 风格
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        // 使用 CartoDB 的 Positron 浅色主题
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
-            maxZoom: 20
+            maxZoom: 20,
+            noWrap: true    // 防止地图水平重复
         }).addTo(map);
 
         // 自定义标记样式
@@ -117,28 +127,25 @@
         // 定义团队位置
         const locations = [
             {
-                name: "纽约",
-                coords: [40.7128, -74.0060],
-                desc: "CoreSpeed 总部",
-                avatar: "image/milton.jpg"
-            },
-            {
-                name: "纽约",
+                name: "Heather",
+                city: "纽约",
                 coords: [40.7228, -73.9960],
-                desc: "市场营销中心",
+                desc: "纽约大学",
                 avatar: "image/heather.jpg"
             },
             {
-                name: "洛杉矶",
-                coords: [34.0522, -118.2437],
-                desc: "北美研发中心",
-                avatar: "image/hao.jpg"
+                name: "张祺祺",
+                city: "北京",
+                coords: [39.9042, 116.4074],
+                desc: "北京大学广告系",
+                avatar: "image/zqq.jpg"
             },
             {
-                name: "上海",
-                coords: [31.2304, 121.4737],
-                desc: "亚太研发中心",
-                avatar: "image/max.jpg"
+                name: "丁佳盈",
+                city: "杭州",
+                coords: [30.2741, 120.1551],
+                desc: "浙江大学传播系",
+                avatar: "image/djy.jpg"
             }
         ];
 
@@ -155,6 +162,7 @@
                 .bindPopup(`
                     <div class="custom-popup">
                         <h3>${location.name}</h3>
+                        <p style="color: #666;">${location.city}</p>
                         <p>${location.desc}</p>
                     </div>
                 `)
