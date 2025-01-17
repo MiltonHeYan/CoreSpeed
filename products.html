@@ -6,21 +6,31 @@
     <title>核速径影 CoreSpeed - 产品介绍</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js"></script>
 </head>
 <body>
+    <div class="language-switcher">
+        <button onclick="setLanguage('zh-CN')">中文</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
+
     <header>
         <nav>
             <div class="logo">CoreSpeed</div>
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="products.html">产品</a></li>
-                <li><a href="team.html">团队</a></li>
+                <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                <li><a href="products.html" data-i18n="nav.products">产品</a></li>
+                <li><a href="team.html" data-i18n="nav.team">团队</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="products" style="margin-top: 120px;">
-        <h2>我们的产品</h2>
+        <h2 data-i18n="products.title">我们的产品</h2>
+        <div class="product-intro">
+            <p class="ecosystem-intro" data-i18n="products.ecosystem.title">一个账号，体验 CoreSpeed 全系列产品生态</p>
+            <p class="ecosystem-desc" data-i18n="products.ecosystem.desc">我们打造了一系列精简而高效的AI工具，帮助您快速突破学习与工作中的关键障碍。从文献解读到知识转化，CoreSpeed 为您提供完整的学习提升解决方案。</p>
+        </div>
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-content">
@@ -28,14 +38,14 @@
                         <img src="image/zhizhiappicon.png" alt="知之 App 图标">
                     </div>
                     <div class="product-info">
-                        <h3>知之 (ZhiZhi)</h3>
-                        <p>您的AI学术陪读助手。打开课件或论文时，AI专家会为您解读每一页内容，让复杂的学术文献变得易于理解。</p>
+                        <h3 data-i18n="products.zhizhi.name">知之 (ZhiZhi)</h3>
+                        <p data-i18n="products.zhizhi.desc">您的AI学术陪读助手。打开课件或论文时，AI专家会为您解读每一页内容，让复杂的学术文献变得易于理解。</p>
                         <div class="product-meta">
                             <span>iOS 14.0+</span>
                             <span>21.5 MB</span>
-                            <span><a href="https://keting.tech" target="_blank" class="website-link">官网：keting.tech</a></span>
+                            <span><a href="https://keting.tech" target="_blank" class="website-link"><span data-i18n="products.website">官网</span>：keting.tech</a></span>
                         </div>
-                        <a href="https://apps.apple.com/cn/app/%E7%9F%A5%E4%B9%8B-zhizhi/id6740143014" class="download-link">从 App Store 下载</a>
+                        <a href="https://apps.apple.com/cn/app/%E7%9F%A5%E4%B9%8B-zhizhi/id6740143014" class="download-link" data-i18n="products.download">从 App Store 下载</a>
                     </div>
                 </div>
             </div>
@@ -46,14 +56,14 @@
                         <img src="image/ketingappicon.png" alt="可听 App 图标">
                     </div>
                     <div class="product-info">
-                        <h3>可听</h3>
-                        <p>AI驱动的播客生成工具，多种AI主持人选择，将任何文件转化为精品播客，随时随地收听高质量的学术与专业知识。</p>
+                        <h3 data-i18n="products.keting.name">可听</h3>
+                        <p data-i18n="products.keting.desc">AI驱动的播客生成工具，多种AI主持人选择，将任何文件转化为精品播客，随时随地收听高质量的学术与专业知识。</p>
                         <div class="product-meta">
                             <span>iOS 12.0+</span>
                             <span>57.6 MB</span>
-                            <span><a href="https://keting.tech" target="_blank" class="website-link">官网：keting.tech</a></span>
+                            <span><a href="https://keting.tech" target="_blank" class="website-link"><span data-i18n="products.website">官网</span>：keting.tech</a></span>
                         </div>
-                        <a href="https://apps.apple.com/cn/app/%E5%8F%AF%E5%90%AC/id6736756780" class="download-link">从 App Store 下载</a>
+                        <a href="https://apps.apple.com/cn/app/%E5%8F%AF%E5%90%AC/id6736756780" class="download-link" data-i18n="products.download">从 App Store 下载</a>
                     </div>
                 </div>
             </div>
@@ -62,12 +72,12 @@
 
     <footer>
         <div class="contact-info">
-            <h3>创始人联系方式</h3>
-            <p>Founder Milton</p>
-            <p>邮件：miltonheyan@icloud.com</p>
-            <p>微信：MiltonHeYan</p>
+            <h3 data-i18n="footer.contact">创始人联系方式</h3>
+            <p data-i18n="footer.founder">Founder Milton</p>
+            <p><span data-i18n="footer.email">邮件</span>：miltonheyan@icloud.com</p>
+            <p><span data-i18n="footer.wechat">微信</span>：MiltonHeYan</p>
         </div>
-        <p class="copyright">&copy; 2024 CoreSpeed. 保留所有权利。</p>
+        <p class="copyright">&copy; 2024 CoreSpeed. <span data-i18n="footer.copyright">保留所有权利</span></p>
     </footer>
 </body>
 </html> 

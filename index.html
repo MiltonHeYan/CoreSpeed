@@ -6,35 +6,40 @@
     <title>核速径影 CoreSpeed - 聚焦核心，迅速产生影响力</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js"></script>
 </head>
 <body>
+    <div class="language-switcher">
+        <button onclick="setLanguage('zh-CN')">中文</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
+
     <header>
         <nav>
             <div class="logo">CoreSpeed</div>
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="products.html">产品</a></li>
-                <li><a href="team.html">团队</a></li>
+                <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+                <li><a href="products.html" data-i18n="nav.products">产品</a></li>
+                <li><a href="team.html" data-i18n="nav.team">团队</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <h1>聚焦核心，迅速产生影响力</h1>
-        <p>CoreSpeed 核速径影致力于解决用户核心痛点，打造精简而高效的产品，帮助您快速突破学习与工作中的关键障碍</p>
-        <button class="cta-button">了解更多</button>
+        <h1 data-i18n="home.title">聚焦核心，迅速产生影响力</h1>
+        <p data-i18n="home.subtitle">CoreSpeed 核速径影致力于解决用户核心痛点，打造精简而高效的产品，帮助您快速突破学习与工作中的关键障碍</p>
     </section>
 
     <section id="about">
-        <h2>关于CoreSpeed</h2>
-        <p>我们是一家专注于解决核心问题的科技公司。通过精准定位用户痛点，运用创新的AI技术，我们打造出简洁而高效的解决方案，帮助用户快速突破瓶颈，产生实质性的影响力。</p>
+        <h2 data-i18n="home.about.title">关于CoreSpeed</h2>
+        <p data-i18n="home.about.desc">我们是一家专注于解决核心问题的科技公司。通过精准定位用户痛点，运用创新的AI技术，我们打造出简洁而高效的解决方案，帮助用户快速突破瓶颈，产生实质性的影响力。</p>
         
         <div class="team-intro">
             <div id="typewriter" class="typewriter"></div>
         </div>
         
         <div class="team-section">
-            <h3>我们的团队</h3>
+            <h3 data-i18n="team.title">我们的团队</h3>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-photo">
@@ -77,12 +82,12 @@
 
     <footer>
         <div class="contact-info">
-            <h3>创始人联系方式</h3>
-            <p>Founder Milton</p>
-            <p>邮件：miltonheyan@icloud.com</p>
-            <p>微信：MiltonHeYan</p>
+            <h3 data-i18n="footer.contact">创始人联系方式</h3>
+            <p data-i18n="footer.founder">Founder Milton</p>
+            <p><span data-i18n="footer.email">邮件</span>：miltonheyan@icloud.com</p>
+            <p><span data-i18n="footer.wechat">微信</span>：MiltonHeYan</p>
         </div>
-        <p class="copyright">&copy; 2024 CoreSpeed. 保留所有权利。</p>
+        <p class="copyright">&copy; 2024 CoreSpeed. <span data-i18n="footer.copyright">保留所有权利</span></p>
     </footer>
 
     <script>
