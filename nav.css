@@ -31,7 +31,7 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
     transition: color 0.3s ease;
 }
 
@@ -50,4 +50,47 @@ nav ul li a:hover {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    nav ul li a {
+        margin: 0.5rem;
+    }
+} 
+
+footer {
+    background-color: #f8f9fa;
+    padding: 2rem 5%;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+footer .contact-info {
+    margin-bottom: 2rem;
+}
+
+footer .contact-info h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+footer .contact-info p {
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+footer .copyright {
+    color: #999;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.website-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.website-link:hover {
+    text-decoration: underline;
 } 
